@@ -34,8 +34,8 @@ function ComicForm({addComic}) {
 
       <h2>Add A New Issue</h2>
 
-      <label htmlFor="image">Image URL: </label>
-      <input name="image_url" value={image_url} onChange={handleChange} />
+      <label htmlFor="image_url">Image URL: </label>
+      <input name="image_url" />
 
       <label htmlFor="title">Title: </label>
       <input name="title" value={title} onChange={handleChange} />
