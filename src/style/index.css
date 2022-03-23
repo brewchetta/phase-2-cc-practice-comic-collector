@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
@@ -28,4 +29,19 @@ code {
 .comic-item {
   border: solid black 2px;
   box-shadow: 3px 5px #222A;
+}
+
+.comic-form {
+  text-align: left;
+}
+
+.comic-form input, .comic-form label {
+  display: block;
+  margin-top: 0.5em;
+}
+
+.sidebar {
+  border: solid black 2px;
+  box-shadow: -4px 7px #222A;
+  padding: 1em;
 }

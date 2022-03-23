@@ -1,21 +1,21 @@
 function ComicForm() {
   return (
 
-    <form>
+    <form className="comic-form">
 
       <h2>Add A New Issue</h2>
 
       <label htmlFor="image">Image URL: </label>
-      <input name="image" value={""} />
+      <input name="image" />
 
       <label htmlFor="title">Title: </label>
-      <input name="title" value={""} />
+      <input name="title" />
 
       <label htmlFor="issue">Issue Number: </label>
-      <input name="issue" type="number" value={""} />
+      <input name="issue" type="number" />
 
       <label htmlFor="description">Description: </label>
-      <input name="description" value={""} />
+      <input name="description" />
 
       <input type="submit" value="Add Issue" />
 
