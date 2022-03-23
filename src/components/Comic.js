@@ -3,24 +3,13 @@ function Comic() {
   return (
     <div className="comic-item">
 
-      {
-        true
+      {/* The image should render if the details aren't displayed */}
+      <img src={"#"} alt={"Comic Issue Image"} />
 
-        ?
-
-        <img src={"#"} alt={"Comic Issue Image"} />
-
-        :
-
-        <>
-          <h3>{"Title"}</h3>
-          <h4>{"Issue No."}</h4>
-          <button>Remove</button>
-        </>
-
-      }
-
-
+      {/* The details should render if the image isn't displayed */}
+      <h3>{"Title"}</h3>
+      <h4>{"Issue No."}</h4>
+      <button>Remove</button>
 
     </div>
   )

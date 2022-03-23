@@ -6,10 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-size: cover;
+  background-position: center;
 }
 
 h1, h2 {
   font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+  background-color: black;
+  color: white;
 }
 
 code {
@@ -35,6 +42,7 @@ code {
   border: solid black 2px;
   box-shadow: 3px 5px #222A;
   width: 300px;
+  background-color: white;
 }
 
 .comic-item img {
@@ -51,7 +59,19 @@ code {
 }
 
 .sidebar {
+  background-color: white;
   border: solid black 2px;
   box-shadow: -4px 7px #222A;
   padding: 1em;
+}
+
+button, input[type=submit] {
+  border: solid black 2px;
+  border-radius: 0.5em;
+  background: none;
+  font-family: 'Permanent Marker', cursive;
+}
+
+input {
+  border: solid black 2px;
 }
