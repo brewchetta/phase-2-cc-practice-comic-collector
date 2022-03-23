@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Phase 2 Practice Code Challenge: Comicbook Collector
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions
 
-## Available Scripts
+This is the Comicbook Collector, a chance for you to share your comicbook collection with the world! Here you can see your comics collection and add new comics, however some of the functionality isn't quite there yet and it's up to you to make it work...
 
-In the project directory, you can run:
+Your job will be to make our app work according to the user stories you will find the [Core Deliverables](#Core-Deliverables) section.
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+After unbundling the project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Run `npm install` in your terminal.
+2. Run `npm run server`. This will run your backend on port `8004`.
+3. In a new terminal, run `npm start`. This will run your React app on port `8000`.
 
-### `npm test`
+Make sure to open [http://localhost:8004/comics](http://localhost:8004/comics) in the browser to verify that your backend is working before you proceed!
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The base URL for your backend is: `http://localhost:8004`
 
-### `npm run build`
+## Core Deliverables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As a user:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. When the app starts, I can see all currently added comics.
+2. When I click on a comic book, it toggles between showing the image and the title / issue number.
+3. I can create comics and they are still there when I refresh the page.
+4. I can remove a comic from the collection by clicking "Remove" and it will persist when the page is reloaded.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Endpoints for Core Deliverables
 
-### `npm run eject`
+#### GET /comics
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Example Response:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```json
+[
+  {
+    "id": 1,
+    "title": "The Incredible Hulk",
+    "issue": "1",
+    "image_url": "https://i.annihil.us/u/prod/marvel/i/mg/9/a0/59933ea5b5c2e/clean.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Incredible Spiderman",
+    "issue": "1",
+    "image_url": "https://i.annihil.us/u/prod/marvel/i/mg/d/40/5196582d03800/clean.jpg"
+  }
+]
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### POST `/comics`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Required Headers:
 
-## Learn More
+```js
+{
+  "Content-Type": "application/json"
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Request Object:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "title": "string",
+  "issue": "string",
+  "img_url": "string"
+}
+```
 
-### Code Splitting
+Example Response:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```json
+{
+  "id": 1,
+  "title": "Detective Comics",
+  "issue": "1",
+  "img_url": "http://batman-image-here.png"
+}
+```
 
-### Analyzing the Bundle Size
+#### DELETE /comics/:id
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Example Response:
 
-### Making a Progressive Web App
+```json
+{}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Advanced Deliverables
 
-### Advanced Configuration
+These deliverables are not required to pass the code challenge, but if you have the extra time, or even after the code challenge, they are a great way to stretch your skills.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+As a user:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. I can click a button to bring up a form to edit the comic. This change persists.
+2. I can click a button to 'favorite' a comic and this is marked in some way. This persists.
