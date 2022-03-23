@@ -13,7 +13,8 @@ function App() {
   }, [])
 
   function addComic(newComic) {
-    setComics({...comics, newComic})
+    console.log(newComic);
+    setComics([...comics, newComic])
   }
 
   return (

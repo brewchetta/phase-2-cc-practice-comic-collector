@@ -21,7 +21,13 @@ function ComicForm({addComic}) {
   function handleSubmit(e) {
     e.preventDefault()
 
-    fetch('http://localhost:8004/comics')
+    fetch('http://localhost:8004/comics', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formState)
+    })
     .then(res => res.json())
     .then(data => addComic(data))
   }
@@ -35,7 +41,7 @@ function ComicForm({addComic}) {
       <h2>Add A New Issue</h2>
 
       <label htmlFor="image_url">Image URL: </label>
-      <input name="image_url" />
+      <input name="image_url" value={image_url} onChange={handleChange} />
 
       <label htmlFor="title">Title: </label>
       <input name="title" value={title} onChange={handleChange} />
