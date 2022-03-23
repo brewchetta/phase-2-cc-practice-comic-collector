@@ -1,5 +1,11 @@
 # Phase 2 Practice Code Challenge: Comicbook Collector
 
+## Demo
+
+Use this gif as an example of how the app should work.
+
+![Demo GIF](./demo.gif)
+
 ## Instructions
 
 This is the Comicbook Collector, a chance for you to share your comicbook collection with the world! Here you can see your comics collection and add new comics, however some of the functionality isn't quite there yet and it's up to you to make it work...
@@ -23,7 +29,7 @@ The base URL for your backend is: `http://localhost:8004`
 As a user:
 
 1. When the app starts, I can see all currently added comics.
-2. When I click on a comic book, it toggles between showing the image and the title / issue number.
+2. When I click on a comic book's image or title, it toggles between showing the image and the title / issue number.
 3. I can create comics and they are still there when I refresh the page.
 4. I can remove a comic from the collection by clicking "Remove" and it will persist when the page is reloaded.
 
