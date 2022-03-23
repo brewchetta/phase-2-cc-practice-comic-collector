@@ -1,5 +1,11 @@
 # Phase 2 Practice Code Challenge: Comicbook Collector
 
+## Demo
+
+Use this gif as an example of how the app should work.
+
+![Demo GIF](./demo.gif)
+
 ## Instructions
 
 This is the Comicbook Collector, a chance for you to share your comicbook collection with the world! Here you can see your comics collection and add new comics, however some of the functionality isn't quite there yet and it's up to you to make it work...
