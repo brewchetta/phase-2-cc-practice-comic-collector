@@ -1,11 +1,16 @@
 import { useState } from 'react'
 
-function Comic({comic}) {
+function Comic({comic, removeComic}) {
 
   const [renderImage, setRenderImage] = useState(true)
 
   function toggleRenderImage() {
     setRenderImage(prev => !prev)
+  }
+
+  function handleRemove() {
+    removeComic(comic)
+    fetch(`http://localhost:8004/comics/${comic.id}`, { method: 'DELETE' })
   }
 
   return (
@@ -19,7 +24,7 @@ function Comic({comic}) {
         <>
         <h3 onClick={toggleRenderImage}>{comic.title}</h3>
         <h4 onClick={toggleRenderImage}>{comic.issue}</h4>
-        <button>Remove</button>
+        <button onClick={handleRemove}>Remove</button>
         </>
       }
     </div>
