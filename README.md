@@ -10,11 +10,11 @@ Use this gif as an example of how the app should work.
 
 This is the Comicbook Collector, a chance for you to share your comicbook collection with the world! Here you can see your comics collection and add new comics, however some of the functionality isn't quite there yet and it's up to you to make it work...
 
-Your job will be to make our app work according to the user stories you will find the [Core Deliverables](#Core-Deliverables) section.
+Your job will be to make our app work according to the user stories you will find in the [Core Deliverables](#Core-Deliverables) section.
 
 ## Setup
 
-After unbundling the project:
+After forking and cloning the project:
 
 1. Run `npm install` in your terminal.
 2. Run `npm run server`. This will run your backend on port `8004`.
