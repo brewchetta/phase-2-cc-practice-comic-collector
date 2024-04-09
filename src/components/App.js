@@ -1,7 +1,19 @@
+import { useState, useEffect } from 'react'
 import ComicsContainer from "./ComicsContainer"
 import ComicForm from "./ComicForm"
 
 function App() {
+
+  const [comics, setComics] = useState([])
+
+  useEffect(() => {
+    fetch('http://localhost:8004/comics')
+    .then(res => res.json())
+    .then(data => setComics(data))
+  }, [])
+
+  console.log(comics)
+
   return (
     <div className="App">
 
@@ -10,11 +22,11 @@ function App() {
       <div className="grid with-sidebar">
 
         <div className="flex-container">
-          <ComicsContainer />
+          <ComicsContainer comics={comics} setComics={setComics} />
         </div>
 
         <div className="sidebar">
-          <ComicForm />
+          <ComicForm setComics={setComics} />
         </div>
 
       </div>

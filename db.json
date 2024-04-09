@@ -13,22 +13,18 @@
       "image_url": "https://i.annihil.us/u/prod/marvel/i/mg/d/40/5196582d03800/clean.jpg"
     },
     {
-      "id": 3,
-      "title": "The Amazing Spiderman",
-      "issue": "300",
-      "image_url": "https://images-na.ssl-images-amazon.com/images/I/A1Hqli+hGCL.jpg"
+      "title": "Superman Has Fun",
+      "image_url": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/78-superman-comic-book-number-12-sep-oct-1941-d-c-comics.jpg",
+      "issue": "12",
+      "description": "Buy warbonds plzzzzzzzzz",
+      "id": 6
     },
     {
-      "id": 4,
-      "title": "Action Comics",
+      "title": "Scarlet Witch",
+      "image_url": "https://cdn.marvel.com/u/prod/marvel/i/mg/9/80/63b4782a27dcf/clean.jpg",
       "issue": "1",
-      "image_url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Action_Comics_1.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Detective Comics",
-      "issue": "38",
-      "image_url": "https://d1466nnw0ex81e.cloudfront.net/n_iv/600/5401401.jpg"
+      "description": "Scarlet hangs out with friends",
+      "id": 7
     }
   ]
 }
